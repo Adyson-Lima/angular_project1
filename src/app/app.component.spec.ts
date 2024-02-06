@@ -9,10 +9,19 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('Existe my-a em app.component.html?', () => {
+  it('Meu a', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.debugElement.query(By.css('[data-testid="my-a"]'))).toBeDefined();          
+    expect(fixture.debugElement.query(By.css('a'))).toBeTruthy();
   });
 
-    
+  it('Meu p', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.debugElement.query(By.css('p'))).toBeTruthy();
+  });
+
+  it('Meu form', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.debugElement.query(By.css('form'))).toBeTruthy();
+  });
+
 });
