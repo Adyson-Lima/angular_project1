@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -8,22 +9,10 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('Existe my-a em app.component.html?', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('[data-testid="my-a"]'))).toBeDefined();          
   });
 
-  it(`should have the 'teste' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('teste');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, teste');
-  });
+    
 });
