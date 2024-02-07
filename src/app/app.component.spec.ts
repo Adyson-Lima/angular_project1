@@ -11,17 +11,17 @@ describe('AppComponent', () => {
 
   it('Meu a', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.debugElement.query(By.css('a'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('[data-testid="my-a"]'))).toBeTruthy();
   });
 
   it('Meu p', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.debugElement.query(By.css('p'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('[data-testid="my-p"]'))).toBeTruthy();
   });
 
   it('Meu form', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.debugElement.query(By.css('form'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('[data-testid="my-form"]'))).toBeTruthy();
   });
 
 });
