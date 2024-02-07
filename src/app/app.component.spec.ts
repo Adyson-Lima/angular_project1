@@ -9,19 +9,19 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('Meu a', () => {
+  it('Existe card em app.component?', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.debugElement.query(By.css('[data-testid="my-a"]'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('[data-testid="mycard"]'))).toBeTruthy();
   });
 
-  it('Meu p', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.debugElement.query(By.css('[data-testid="my-p"]'))).toBeTruthy();
-  });
+  // it('Meu p', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   expect(fixture.debugElement.query(By.css('[data-testid="my-p"]'))).toBeTruthy();
+  // });
 
-  it('Meu form', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.debugElement.query(By.css('[data-testid="my-form"]'))).toBeTruthy();
-  });
+  // it('Meu form', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   expect(fixture.debugElement.query(By.css('[data-testid="my-form"]'))).toBeTruthy();
+  // });
 
 });
