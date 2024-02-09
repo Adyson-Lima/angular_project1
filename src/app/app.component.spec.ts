@@ -14,4 +14,9 @@ describe('AppComponent', () => {
     expect(fixture.debugElement.query(By.css('[data-testid="mycard"]'))).toBeTruthy();
   });
 
+  it('Existe link Home em app.component?', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.debugElement.query(By.css('[data-testid="mylink"]'))).toBeTruthy();
+  });
+
 });
